@@ -12,4 +12,3 @@
 
   ### Terminal (Fastfetch y utilidades)
   ![Terminal y Fastfetch](screenshots/terminal.png)
-  EOF
