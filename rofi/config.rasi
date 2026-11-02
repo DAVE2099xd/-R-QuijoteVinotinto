@@ -1,0 +1,87 @@
+configuration {
+    font: "JetBrainsMono Nerd Font 12";
+    show-icons: true;
+    display-drun: " ";
+    drun-display-format: "{name}";
+    disable-history: false;
+    sidebar-mode: false;
+}
+
+* {
+    background-color: transparent;
+    text-color:       #edf6d6;
+}
+
+window {
+    transparency:     "real";
+    background-color: #150413;
+    border:           2px;
+    border-color:     #edf6d6;
+    border-radius:    12px;
+    width:            550px;
+    padding:          15px;
+}
+
+mainbox {
+    spacing:          10px;
+    padding:          10px;
+}
+
+inputbar {
+    background-color: #26161c;
+    border-radius:    8px;
+    padding:          10px;
+    spacing:          10px;
+    children:         [ prompt, entry ];
+}
+
+prompt {
+    text-color:       #edf6d6;
+}
+
+entry {
+    text-color:       #edf6d6;
+    placeholder:      "Buscar aplicación...";
+    placeholder-color: #7d4957;
+}
+
+listview {
+    margin:           10px 0 0 0;
+    spacing:          5px;
+    lines:            8;
+    columns:          1;
+}
+
+/* Forzamos a que CUALQUIER elemento inactivo (normal o alterno) tenga el mismo fondo */
+element, element normal normal, element normal alt, element alternate normal, element alternate alt {
+    background-color: #150413;
+    text-color:       #edf6d6;
+    padding:          8px 12px;
+    border-radius:    6px;
+}
+
+/* Estado seleccionado absoluto */
+element selected, element selected normal, element selected alt, element selected active {
+    background-color: #edf6d6;
+    text-color:       #150413;
+}
+
+element-icon {
+    size:             20px;
+    margin-right:     10px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+}
+
+element selected element-text {
+    background-color: transparent;
+    text-color:       #150413;
+}
+
+element selected element-icon {
+    background-color: transparent;
+}

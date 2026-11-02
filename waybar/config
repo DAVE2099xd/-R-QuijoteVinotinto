@@ -1,0 +1,55 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 44,
+    "spacing": 10,
+    "modules-left": ["custom/power", "hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["backlight", "pulseaudio", "battery", "tray"],
+
+    "custom/power": {
+        "format": "",
+        "on-click": "wlogout -b 4 -l ~/.config/wlogout/layout -C ~/.config/wlogout/style.css",
+        "tooltip": false
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "●",
+            "default": "○"
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+    "clock": {
+        "locale": "en_US.UTF-8",
+        "format": "{:%a %e | %H:%M}",
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-muted": "󰖁", 
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "tooltip": true,
+        "tooltip-format": "{volume}%"
+    },
+    "backlight": {
+        "format": "{icon}",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "tooltip": true,
+        "tooltip-format": "{percent}%"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "<span font='22'>{icon}</span> <span font='12' rise='3000'>{capacity}%</span>",
+        "format-charging": "<span font='18'></span> <span font='12' rise='1500'>{capacity}%</span>",
+        "format-plugged": "<span font='18'></span> <span font='12' rise='1500'>{capacity}%</span>",
+        "format-icons": ["", "", "", "", ""]
+    }
+}
