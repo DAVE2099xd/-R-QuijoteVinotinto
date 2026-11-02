@@ -1,0 +1,24 @@
+/* Fondo general y barras superiores */
+window, .background, .sidebar, .view, treeview, list, grid, headerbar, .titlebar, .toolbar, menubar {
+    background-color: #150413;
+    color: #edf6d6;
+}
+
+/* Buscador y cajas de texto */
+entry {
+    background-color: #3e232c;
+    color: #edf6d6;
+    border: 1px solid #edf6d6;
+    border-radius: 5px;
+}
+
+/* Elemento seleccionado (Fondo claro, texto oscuro para contraste) */
+row:selected, treeview:selected, .view:selected, text selection {
+    background-color: #edf6d6;
+    color: #150413;
+}
+
+/* Iconos de la barra lateral */
+.sidebar image, placessidebar image {
+    color: #edf6d6;
+}
